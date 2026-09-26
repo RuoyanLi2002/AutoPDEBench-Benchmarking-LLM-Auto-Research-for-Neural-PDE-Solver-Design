@@ -1,0 +1,36 @@
+data:
+  dataset_root: 
+  data_save_path: 
+  split_interval: 3
+  
+model:
+  n_block: 8
+  n_mode: 256
+  n_dim: 128
+  n_head: 8
+  n_layer: 2
+  attn: Attention_Vanilla
+  act: GELU
+  y1_dim: 3
+  y2_dim: 1
+
+training:
+  exp_name: NS/run0
+  seed: 42
+  num_epochs: 100
+  batch_size: 16
+  save_freq: 5
+  model_path: "model.pth"
+  
+  optimizer:
+    name: Adam
+    params:
+      lr: 1.0e-4
+  
+  scheduler:
+    name: CosineAnnealingLR
+    params:
+      T_max: 100
+      eta_min: 1.0e-6
+
+exp_name: NS/run0

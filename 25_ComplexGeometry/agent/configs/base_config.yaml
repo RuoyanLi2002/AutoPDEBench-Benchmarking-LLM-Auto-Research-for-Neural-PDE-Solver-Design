@@ -1,0 +1,9 @@
+data:
+  dataset_root: 
+  data_save_path: 
+  save_dir: 
+  preprocessed: false
+  fold_id: 0
+  cfd_mesh: true
+  r: null
+  use_height: false

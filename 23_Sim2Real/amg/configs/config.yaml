@@ -1,0 +1,45 @@
+data:
+  dataset_root: 
+  data_save_path: 
+  split_interval: 10
+  
+model:
+  feature_width: 128
+  num_layers: 2
+  pos_dim: 2
+  input_features: 2
+  output_features: 2
+  batch_norm: True
+  act: 'relu'
+  global_ratio: 0.25
+  global_k: 4
+  global_cos: True 
+  global_pos: False
+  local_nodes: 128
+  local_ratio: 0.25
+  local_k: 4
+  local_cos: False
+  local_pos: True
+  num_phys: 32
+  num_heads: 8
+
+training:
+  exp_name: FSI/run0
+  seed: 42
+  num_epochs: 100
+  batch_size: 4
+  save_freq: 5
+  model_path: "model.pth"
+  
+  optimizer:
+    name: Adam
+    params:
+      lr: 1.0e-4
+  
+  scheduler:
+    name: CosineAnnealingLR
+    params:
+      T_max: 100
+      eta_min: 1.0e-6
+
+exp_name: FSI/run0

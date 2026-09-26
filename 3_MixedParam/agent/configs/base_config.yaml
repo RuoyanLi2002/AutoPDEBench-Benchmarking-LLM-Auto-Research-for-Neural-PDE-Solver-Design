@@ -1,0 +1,4 @@
+data:
+  dataset_root: 
+  data_save_path: 
+  split_interval: 4

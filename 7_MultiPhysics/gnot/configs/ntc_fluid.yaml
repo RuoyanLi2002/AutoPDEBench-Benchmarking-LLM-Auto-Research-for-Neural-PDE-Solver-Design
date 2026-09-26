@@ -1,0 +1,10 @@
+base_config: configs/ntc_base.yaml
+data:
+  field: fluid
+model:
+  trunk_size: 1
+  output_size: 4
+training:
+  exp_name: NTCouple/ntc_fluid
+
+exp_name: NTCouple/ntc_fluid

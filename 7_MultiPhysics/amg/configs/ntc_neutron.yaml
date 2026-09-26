@@ -1,0 +1,11 @@
+base_config: configs/base.yaml
+
+model:
+  input_features: 2        # boundary condition + (fuel, fluid) temperature stack
+  output_features: 1       # neutron field
+
+data:
+  field: neutron
+
+training:
+  exp_name: exp_neutron

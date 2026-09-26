@@ -1,0 +1,11 @@
+base_config: configs/base.yaml
+
+model:
+  input_features: 2        # neutron condition + fluid-interface condition
+  output_features: 1       # solid (fuel) temperature field
+
+data:
+  field: solid
+
+training:
+  exp_name: exp_solid

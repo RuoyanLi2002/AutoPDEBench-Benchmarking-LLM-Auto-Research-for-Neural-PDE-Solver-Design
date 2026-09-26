@@ -1,0 +1,43 @@
+data:
+  dataset_root: 
+  dataset: iter1
+  n_data_set: 5000
+  gap: 32
+
+model:
+  latent_dim: 128
+  num_head: 8
+  dropout: 0.0
+  mlp_ratio: 4.0
+  slice_num: 32
+  n_layers: 10
+  space_dim: 0
+
+training:
+  seed: 42
+  num_epochs: 100
+  batch_size: 4
+  save_freq: 5
+  model_path: "model.pth"
+  
+  optimizer:
+    name: Adam
+    params:
+      lr: 1.0e-4
+  
+  scheduler:
+    name: CosineAnnealingLR
+    params:
+      T_max: 100
+      eta_min: 1.0e-6
+
+
+couple:
+  neutron_config: configs/ntc_neutron.yaml
+  solid_config: configs/ntc_solid.yaml
+  fluid_config: configs/ntc_fluid.yaml
+  n_samples: null
+  damping: 0.5
+  max_iter: 100
+  tol: 1.0e-4
+  solid_neu_norm: neutron

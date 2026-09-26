@@ -1,0 +1,17 @@
+#!/bin/bash
+
+export CUDA_VISIBLE_DEVICES=0
+export OMP_NUM_THREADS=3
+export MKL_NUM_THREADS=3
+
+python main.py \
+    --config configs/ntc_fluid.yaml \
+    --to_train
+
+python main.py \
+    --config configs/ntc_neutron.yaml \
+    --to_train
+
+python main.py \
+    --config configs/ntc_solid.yaml \
+    --to_train

@@ -1,0 +1,20 @@
+data:
+  dataset_root: 
+  dataset: iter1
+  n_data_set: 5000
+  gap: 32
+  field: neutron
+
+# Coupled fixed-point evaluation (`--eval_split test`). The three field configs
+# below each point at a trained surrogate's experiment dir; the solver loads all
+# three and Picard-iterates to convergence. The agent harness promotes each
+# iteration's freshly trained checkpoints into these dirs before the coupled test.
+couple:
+  neutron_config: configs/iter_0_neutron_config.yaml
+  solid_config: configs/iter_0_solid_config.yaml
+  fluid_config: configs/iter_0_fluid_config.yaml
+  n_samples: null
+  damping: 0.5
+  max_iter: 100
+  tol: 1.0e-4
+  solid_neu_norm: neutron

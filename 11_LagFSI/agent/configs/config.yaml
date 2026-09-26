@@ -1,0 +1,23 @@
+base_config: configs/base_config.yaml
+
+model:
+  input_dim: 1
+
+training:
+  exp_name: experiment_1
+  seed: 42
+  num_epochs: 100
+  batch_size: 32
+  save_freq: 10
+  model_path: "model.pth"
+  
+  optimizer:
+    name: Adam
+    params:
+      lr: 1.0e-4
+  
+  scheduler:
+    name: CosineAnnealingLR
+    params:
+      T_max: 100
+      eta_min: 1.0e-6

@@ -1,0 +1,6 @@
+data:
+  dataset_root: 
+  data_save_path: 
+  split_interval: 3
+  seq_length: 7
+  connectivity_radius: 0.04

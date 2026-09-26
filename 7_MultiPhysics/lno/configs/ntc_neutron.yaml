@@ -1,0 +1,10 @@
+base_config: configs/ntc_base.yaml
+data:
+  field: neutron
+model:
+  y1_dim: 2
+  y2_dim: 1
+training:
+  exp_name: NTCouple/ntc_neutron
+
+exp_name: NTCouple/ntc_neutron

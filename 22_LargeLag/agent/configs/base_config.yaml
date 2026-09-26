@@ -1,0 +1,7 @@
+data:
+  dataset_root: 
+  data_save_path: 
+  sample_cache_dir: 
+  cache_dir: 
+  split_interval: 5
+  seq_length: 5

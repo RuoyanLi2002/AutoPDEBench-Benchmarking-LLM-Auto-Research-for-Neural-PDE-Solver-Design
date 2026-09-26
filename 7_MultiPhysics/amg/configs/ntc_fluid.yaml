@@ -1,0 +1,24 @@
+base_config: configs/base.yaml
+
+model:
+  input_features: 1        # heat flux condition
+  output_features: 4       # fluid field (temperature, density-ish, u, v channels)
+
+data:
+  field: fluid
+
+training:
+  exp_name: exp_fluid
+
+# The coupled fixed-point evaluation is driven from this config (see eval.py /
+# eval_test). It loads all three field surrogates via the per-field configs
+# below and iterates them to a fixed point on the coupled `val` set.
+couple:
+  damping: 0.5             # relaxation coefficient for the fixed-point update
+  max_iter: 50
+  tol: 1.0e-4
+  n_samples: null          # null = use all coupled val samples
+  solid_neu_norm: neutron  # normalization used for the neutron condition fed to solid
+  neutron_config: configs/ntc_neutron.yaml
+  solid_config: configs/ntc_solid.yaml
+  fluid_config: configs/ntc_fluid.yaml
