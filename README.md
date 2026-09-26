@@ -1,4 +1,4 @@
-# AutoPDEBench
+# AutoPDEBench: Benchmarking LLM Auto-Research for Neural PDE Solver Design
 
 ![dataset](dataset2.png)
 
